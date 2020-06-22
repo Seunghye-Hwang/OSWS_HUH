@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Recipe </title>
+    <title>My Own Michelin</title>
     <meta name="viewport" content="width=devicd-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>   
+  </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#close').click(function(){
+        $('#pop').hide();
+      })
+    })</script>
 
-<style>
-     .container-fluid{
-                    padding-top: 70px;
-                    padding-bottom: 70px;
-                }
-                .navbar{
-                    background-color: white;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                    border:0;
-                    border-radius: 0;
-                    margin-bottom: 0;
-                    margin-right: 30px;
-                    font-size: 20px;
-                    letter-spacing: 5px;
-                }
-                .navbar-nav li a:hover{
-                    color: darksalmon !important;
-                }
-                .navbar-brand{
-                    font-size: 60px;
+<style type="text/css">
+    .container-fluid{
+                   padding-top: 70px;
+                   padding-bottom: 70px;
+               }
+               .navbar{
+                   background-color: white;
+                   padding-top: 15px;
+                   padding-bottom: 15px;
+                   border:0;
+                   border-radius: 0;
+                   margin-bottom: 0;
+                   margin-right: 30px;
+                   font-size: 20px;
+                   letter-spacing: 5px;
+               }
+               .navbar-nav li a:hover{
+                   color: darksalmon !important;
+               }
+               .navbar-brand{
+                   font-size: 40px;
 
-                }
-    .navbar-brand:hover{
+               }
+   .navbar-brand:hover{
 
-         color: darksalmon !important;
-    
-    }
-  
+        color: darksalmon !important;
+   
+   }
+ 
 .login{
-  background:darksalmon;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:60px;
-  font-size:1.0em;
-  padding:0 7px;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
+ background:darksalmon;
+ color:#fff;
+ border:none;
+ position:relative;
+ height:60px;
+ font-size:1.0em;
+ padding:0 10px;
+ cursor:pointer;
+ transition:800ms ease all;
+ outline:none;
 }
 .login:hover{
   background:#fff;
@@ -73,7 +81,7 @@
   width:50%;
   transition:800ms ease all;
 }
-
+   
 .carousel-control.right, .carousel-control.left{
     background-image: none;
     color: darkolivegreen;
@@ -83,6 +91,11 @@
 }
 .carousel-indicators li.active{
     background-color: darkolivegreen;
+}
+.carousel-inner{
+  width: 800px;
+  height: 800px;
+  margin-left: 350px;
 }
 .item{
     margin: 70px 0;
@@ -96,15 +109,22 @@
 .Info{
          background-color: darksalmon;
          text-align: right;
-         padding-top: 7px;
-         padding-bottom: 7px; 
-         padding-left: 7px;
+         padding-top: 10px;
+         padding-bottom: 10px; 
+         padding-left: 10px;
          padding-right: 20px;
          padding-bottom: 30px;
          width: 100%;
          height: 100px;
       
      }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.dropdown-item{
+  color: black;
+}
      
 .mainDisplay{
     text-align:center;
@@ -136,24 +156,45 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="#">Recipe</a>
+                <a class="navbar-brand" href="#">My Own Michelin</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">레시피</a></li>
-                    <li><a href="#">인기차트</a></li>
-                    <li><a href="#">게시판</a></li>
-                    <li><button type="button" class="login" onclick="location.href='Login.html'">로그인</button> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          레시피
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="sd.html">반찬</a><br>
+                          <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                          <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                          <a class="dropdown-item" href="dessert.html">간식</a>
+                          
+                        </div>
+                      </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            인기차트
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="반찬.html">반찬</a><br>
+                            <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                            <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="디저트간식.html">간식</a>
+                            
+                          </div>
+                        </li>
+                        <li><a href="mypage.html">마이 페이지</a></li>
+                        <li><button type="button" class="login" onclick="location.href='Login.html'">로그인</button> </li>
                 </ul>
             </div> 
         </div>
     </nav>
-    <br><br><br>
     <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
         <div class="mainDisplay">
             <div class="row">
                 <div class="col-xs-4">
-                    <a href="#" class="thumbnail">
+                    <a href="soup_R1.html" class="thumbnail">
                         <img src="감자.jpg" style="width:275px; height:275px" class="img-responsive">
                         <div class="caption">
                             <h3>감자짜글이</h3>
@@ -161,7 +202,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="#" class="thumbnail">
+                    <a href="soup_R2.html" class="thumbnail">
                         <img src="김치.jpg" style="width:275px; height:275px" class="img-responsive">
                         <div class="caption">
                             <h3>김치찌개</h3>
@@ -169,7 +210,7 @@
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="#" class="thumbnail">
+                    <a href="soup_R3.html" class="thumbnail">
                         <img src="된장.jpg" style="width:275px; height:275px" class="img-responsive">
                         <div class="caption">
                             <h3>된장찌개</h3>
@@ -179,7 +220,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-4">
-                    <a href="#" class="thumbnail">
+                    <a href="soup_R4.html" class="thumbnail">
                         <img src="미역국.jpg" style="width:275px; height:275px" class="img-responsive">
                         <div class="caption">
                             <h3>소고기미역국</h3>
@@ -189,7 +230,6 @@
             </div>
         </div>
     </div>
-    <br><br><br>
 <div class="Info">
 OpenSource Web Software<br>
 2018038003 Eom  Eunji <br>
