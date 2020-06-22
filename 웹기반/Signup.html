@@ -75,40 +75,37 @@
 }
 
 .signup{
-  background-image: url("breakfast.jpg");
+
  min-height: 800px;
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
  position: relative;
- opacity: 0.4;
  z-index:1;
 }
 .signup::after{
-  top:0;
-  left:0;
- background-image: url("breakfast.jpg");
- background-size:100%;
-    opacity:0.5!important;
-    content:"";
-    width:100%;
-    height:100%;
-    z-index: -1;
-
+  width:100%;
+  height: 100%;
+  content: "";
+  background: url("breakfast.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity:0.5; 
 }
 .container_log {
   position: absolute;
   right: 0;
-  margin-top: 200px;
-  margin-right: 20px;
+  margin-top: 100px;
+  margin-right: 600px;
   width: 300px;
   max-width: 380px;
   padding: 16px;
   background-color: white;
-  z-index: 1;
 }
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=tel] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -117,7 +114,7 @@ input[type=text], input[type=password] {
 
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus input[type=email]:focus input[type=tel]:focus{
   background-color: #ddd;
   outline: none;
 
@@ -204,5 +201,12 @@ input[type=text]:focus, input[type=password]:focus {
  
   </form>
 </div>
+<div class="Info">
+  OpenSource Web Software<br>
+  2018038003 Eom  Eunji <br>
+  2018038009 Hong Yeongseon<br>
+  2018038024 Hwang Seunghye<br>
+  
+  </div>
 </body>
 </html>
