@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Own Michelin</title>
+    <meta name="viewport" content="width=devicd-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>   
+  </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#close').click(function(){
+        $('#pop').hide();
+      })
+    })</script>
+
+<style type="text/css">
+     .container-fluid{
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+                }
+                .navbar{
+                    background-color: white;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    border:0;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                    font-size: 20px;
+                    letter-spacing: 5px;
+                }
+                .navbar-nav li a:hover{
+                    color: darksalmon !important;
+                }
+                .navbar-brand{
+                    font-size: 40px;
+
+                }
+    .navbar-brand:hover{
+
+         color: darksalmon !important;
+    
+    }
+  
+.login{
+  background:darksalmon;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.0em;
+  padding:0 10px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.login:hover{
+  background:#fff;
+  color:darksalmon;
+}
+.login:before,.login:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: darksalmon;
+  transition:400ms ease all;
+}
+.login:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.login:hover:before,.login:hover:after{
+  width:50%;
+  transition:800ms ease all;
+}
+
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+    color: darkolivegreen;
+}
+.carousel-indicators li{
+    background-color: darkolivegreen;
+}
+.carousel-indicators li.active{
+    background-color: darkolivegreen;
+}
+.item{
+    margin: 70px 0;
+}
+.navbar-toggle{
+    background-color: darksalmon;
+}
+.navbar-brand:hover{
+    color: darksalmon;
+}
+.Info{
+         background-color: darksalmon;
+         text-align: right;
+         padding-top: 10px;
+         padding-bottom: 10px; 
+         padding-left: 10px;
+         padding-right: 20px;
+         padding-bottom: 30px;
+         width: 100%;
+         height: 100px;
+      
+     }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.dropdown-item{
+  color: black;
+}
+.left_img{
+width: 500px;
+height: 500px;
+float: left;
+margin-left:50px;
+}
+.recipe{
+  margin-left: 50px;
+  background-color:white;
+  border:lightgray solid 1px;
+ width: 500px;
+ height: 500px;
+ float: left;
+
+}
+#choose{
+  text-align: center;
+  background-color: darksalmon;
+  margin-left:50%;
+  border-radius: 5px;
+  border:1px solid darksalmon;
+  color:white;
+}
+#choose:hover{
+  color:darksalmon;
+  background-color: white;
+}
+
+</style>
+<script>
+  function handleClick(button){
+    button.style.backgroundColor="pink";
+  }
+</script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">My Own Michelin</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      레시피
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="sd.html">반찬</a><br>
+                        <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                        <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                        <a class="dropdown-item" href="dessert.html">간식</a>
+                      
+                    </div>
+                  </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        인기차트
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="반찬.html">반찬</a><br>
+                            <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                            <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="디저트간식.html">간식</a>
+                        
+                      </div>
+                    </li>
+                    <li><a href="mypage.html">마이 페이지</a></li>
+                    <li><button type="button" class="login" onclick="location.href='Login.html'">로그아웃</button> </li>
+                 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
+        <h1 style="text-align: center;">냉라면</h1>       
+        <br>
+        <div class="container container-fluid">
+            <div class="left_img">
+              <img src="냉라면.jpg" style="height:500px;width:500px">   
+            </div>   
+            <div class="container-fluid recipe">
+              <h3>재료</h3>
+              <h4>라면 1개 양파 1/6개 (40g) 콩나물 2컵 (20g) 진간장 2큰술 (20g) 황설탕 2큰술 (24g) 식초 2큰술 (20g) 정수물 1컵 (190g) 청양고추 1개 (8g) 얼음 적당량 </h4>
+              <br>
+              <h3>만드는 법</h3>
+              <h4>1. 콩나물은 가볍게 세척하여 준비한다. 2. 양파는 가늘게 채 썰어 준비한다. 3. 청양고추는 반으로 갈라 잘게 썰어준다. 4. 냄비에 물을 넣어 끓어오르면 콩나물, 면, 건더기 수프, 양파를 넣고 삶아 얼음 물에 헹군다. 5. 물, 라면 수프, 진간장, 식초, 설탕을 잘 섞어준다. 6. 청양고추는 육수와 고명에 나눠서 사용한다. 7. 완성 그릇에 삶아낸 채소와 면을 담고 청양고추를 올린 후 육수를 부어 완성한다.</h4>
+            </div>  
+        </div>
+        <button id="choose" onclick="handleClick(this);">찜하기</button>
+    </div>
+       
+
+  <div class="Info">
+    OpenSource Web Software<br>
+    2018038003 Eom  Eunji <br>
+    2018038009 Hong Yeongseon<br>
+    2018038024 Hwang Seunghye<br>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>
