@@ -92,11 +92,6 @@
 .carousel-indicators li.active{
     background-color: darkolivegreen;
 }
-.carousel-inner{
-  width: 800px;
-  height: 800px;
-  margin-left: 350px;
-}
 .item{
     margin: 70px 0;
 }
@@ -118,16 +113,6 @@
          height: 100px;
       
      }
-     #pop{
-       width: 500x;
-       height: 700px;
-       background: white;
-       position: absolute;
-       top: 10px;
-       left: 100px;
-       text-align: center;
-       border: 2px solid darksalmon;
-     }
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -135,16 +120,46 @@
 .dropdown-item{
   color: black;
 }
+.left_img{
+width: 500px;
+height: 500px;
+float: left;
+margin-left:50px;
+}
+.recipe{
+  margin-left: 50px;
+  background-color:white;
+  border:lightgray solid 1px;
+ width: 500px;
+ height: 500px;
+ float: left;
+
+}
+#choose{
+  text-align: center;
+  background-color: darksalmon;
+  margin-left:50%;
+  border-radius: 5px;
+  border:1px solid darksalmon;
+  color:white;
+}
+#choose:hover{
+  color:darksalmon;
+  background-color: white;
+}
 
 </style>
-
+<script>
+  function handleClick(button){
+    button.style.backgroundColor="pink";
+  }
+</script>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -160,9 +175,9 @@
                     </a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="sd.html">반찬</a><br>
-                      <a class="dropdown-item" href="soup.html">찌개/국</a><br>
-                      <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
-                      <a class="dropdown-item" href="dessert.html">간식</a>
+                        <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                        <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                        <a class="dropdown-item" href="dessert.html">간식</a>
                       
                     </div>
                   </li>
@@ -172,14 +187,14 @@
                       </a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="반찬.html">반찬</a><br>
-                        <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
-                        <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
-                        <a class="dropdown-item" href="디저트간식.html">간식</a>
+                            <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                            <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="디저트간식.html">간식</a>
                         
                       </div>
                     </li>
                     <li><a href="SearchMart.html">주변 마트 찾기</a></li>
-                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="mypage.html">마이 페이지</a></li>
                     <li><button type="button" class="login" onclick="location.href='Login.html'">로그아웃</button> </li>
                  
                 </ul>
@@ -187,57 +202,32 @@
         </div>
     </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="rice.jpg" class="img-responsive">
-      </div>
-  
-      <div class="item">
-        <img src="cafe1.jpg" class="img-responsive">
-      </div>
-  
-      <div class="item">
-        <img src="cafe2.jpg" class="img-responsive">
-      </div>
+    <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
+        <h1 style="text-align: center;">김치밥</h1>       
+        <br>
+        <div class="container container-fluid">
+            <div class="left_img">
+              <img src="김치밥.jpg" style="height:500px;width:500px">   
+            </div>   
+            <div class="container-fluid recipe">
+              <h3>재료</h3>
+              <h4>식용유 1큰술(12ml) 김치 1/3컵(80g) 대파 1/2컵(15g) 고운고춧가루 1큰술(5g) 진간장 1큰술(10ml) 황설탕 1작은술(3g) 밥 1공기(200g) 김가루 1/2컵(3g) 모짜렐라 1/2컵(50g) 옥수수콘 1/2컵(30g) 깨 1꼬집(1g) </h4>
+              <br>
+              <h3>만드는 법</h3>
+              <h4>1단계: 김치볶음 만들기 - 불을 끈 상태에서 프라이팬에 식용유 1큰술을 넣어준다. - 대파 1/2컵을 넣어준다. - 불을 켜고 대파를 튀기듯이 볶아준다. - 자른 김치 1/3컵을 넣고 볶아준다. - 진간장 1큰술을 넣어준다. (이때 달궈져 있는 상태에서 진간장을 넣어 기름에 튀겨지면서 눌게 한다.) - 황설탕 1작은술을 눌린 기름 위에 넣어준다. - 재료를 고루 섞어 볶아준다. - 고운 고춧가루 1큰술을 넣고 섞어준다. (온도가 높으면 고운고춧가루가 탈 수 있으니 주의한다.) 2단계: 김치밥 만들기 - 믹싱 볼에 김치 베이스 전량, 밥 200g을 넣고 비벼준다. - 불을 끈 상태에서 프라이팬에 비빈 김치밥을 넣고 주걱을 이용해서 넓게 펴준다. - 약불로 불을 켜고 모짜렐라 치즈 1/2컵을 올려준다. (옥수수콘을 넣으면 식감을 더할 수 있다.) - 뚜껑을 덮고 약 3분간 치즈를 녹여준다. - 완성 접시에 김치밥을 반으로 접어 담아준다. - 옥수수콘 1/2컵, 김가루 1/2컵, 깨 1꼬집을 곁들인다.</h4>
+            </div>  
+        </div>
+        <button id="choose" onclick="handleClick(this);">찜하기</button>
     </div>
-  
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+       
+
+  <div class="Info">
+    OpenSource Web Software<br>
+    2018038003 Eom  Eunji <br>
+    2018038009 Hong Yeongseon<br>
+    2018038024 Hwang Seunghye<br>
   </div>
 
-
-<div class="Info">
-OpenSource Web Software<br>
-2018038003 Eom  Eunji <br>
-2018038009 Hong Yeongseon<br>
-2018038024 Hwang Seunghye<br>
-</div>
-<div id="pop">
-  <h1>    
-    오늘의 추천 메뉴
-</h1>
-<img class="popup_img" src="soup.jpg">
-<br>
-<a class="link" href="#" style="font-size:xx-large;">레시피 보러가기--></a>
-<div>
-  <div id="close" style="margin-top: 20px; font-size: xx-large;">닫기</div>
-</div>
 </div>
 
 

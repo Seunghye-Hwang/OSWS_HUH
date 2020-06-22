@@ -2,14 +2,16 @@
 <html>
 <head>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-  <title>디저트/간식</title>
+  <title>찌개/국</title>
   <meta charset="UTF-8">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
+
 <button onclick="location.href='Mainpage.html'">back</button >
+
 <style>
   body{
     background-color:white;
@@ -156,33 +158,13 @@
 <div id="wrap">
   <div class="container">
     <ul id="best_search">
-      <li><p>디저트/간식</p></li>
+      <li><p>찌개/국</p></li>
       <li>
         <dl class="time1" style="display:">
-          <dd><a class="t" href="#"><div class="num">1</div>고구마빠스</a></dd>
-          <dd><a class="t" href="#"><div class="num">2</div>새둥지전</a></dd>
-          <dd><a class="t" href="#"><div class="num">3</div>멕시칸샐러드</a></dd>
-          <dd><a class="t" href="#"><div class="num">4</div>알새우칩카나페</a></dd>
-          <dd><a class="t" href="#"><div class="num">5</div>라면땅</a></dd>
-        </dl>
-        <dl class="time2" style="display:none;">
-          <dd><a class="t" href="#"><div class="num">6</div>토마토달걀볶음</a></dd>
-          <dd><a class="t" href="#"><div class="num">7</div>만두피튀김</a></dd>
-          <dd><a class="t" href="#"><div class="num">8</div>감자스프</a></dd>
-          <dd><a class="t" href="#"><div class="num">9</div>길거리토스트</a></dd>
-          <dd><a class="t" href="#"><div class="num">10</div>치즈토스트</a></dd>
-        </dl>
-        <dl class="time3" style="display:none;">
-          <dd><a class="t" href="#"><div class="num">11</div>햄치즈토스트</a></dd>
-          <dd><a class="t" href="#"><div class="num">12</div>사과조림</a></dd>
-          <dd><a class="t" href="#"><div class="num">13</div>사과조림토스트</a></dd>
-          <dd><a class="t" href="#"><div class="num">14</div>사과조림프렌치토스트</a></dd>
-          <dd><a class="t" href="#"><div class="num">15</div>오리지널치즈토스트</a></dd>
-        </dl>
-        <dl class="time4" style="display:none;">
-          <dd><a class="t" href="#"><div class="num">16</div>한입치즈토스트</a></dd>
-          <dd><a class="t" href="#"><div class="num">17</div>옥수수전</a></dd>
-        </dl>
+          <dd><a class="t" href="#"><div class="num">1</div>감자짜글이</a></dd>
+          <dd><a class="t" href="#"><div class="num">2</div>김치찌개</a></dd>
+          <dd><a class="t" href="#"><div class="num">3</div>된장찌개</a></dd>
+          <dd><a class="t" href="#"><div class="num">4</div>소고기미역국</a></dd>
       </li>
       <li>
         <a class="best_add ad1" style="cursor:pointer" onClick="javascript:view('0')">&#62;</a>
@@ -233,14 +215,14 @@
   google.charts.load('current', {packages: ['corechart']});
   function columnChart1() {
     var arr = [ ['메뉴', '남자', '여자'],
-                ['고구마빠스', 5, 6],
-                ['새둥지전', 2, 2],
-                ['멕시칸샐러드', 3, 1],
-                ['알새우칩카나페', 1, 1]
+                ['감자짜글이', 2, 4],
+                ['김치찌개', 4, 2],
+                ['된장찌개', 3, 2],
+                ['소고기미역국', 1, 2]
               ];
     var dataTable = google.visualization.arrayToDataTable(arr);
     var options = {
-      title: '디저트/간식 TOP4',
+      title: '찌개/국 TOP4',
       hAxis: {
         title: '메뉴',
         titleTextStyle: {
@@ -261,4 +243,6 @@
     });
   });
 </script>
+
+
 </html>

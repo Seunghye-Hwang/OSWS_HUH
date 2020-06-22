@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> My Page </title>
+    <title>My Own Michelin</title>
     <meta name="viewport" content="width=devicd-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>   
   </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#close').click(function(){
+        $('#pop').hide();
+      })
+    })</script>
 
-<style>
+<style type="text/css">
      .container-fluid{
                     padding-top: 70px;
                     padding-bottom: 70px;
@@ -75,6 +82,16 @@
   transition:800ms ease all;
 }
 
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+    color: darkolivegreen;
+}
+.carousel-indicators li{
+    background-color: darkolivegreen;
+}
+.carousel-indicators li.active{
+    background-color: darkolivegreen;
+}
 .item{
     margin: 70px 0;
 }
@@ -86,7 +103,14 @@
 }
 .Info{
          background-color: darksalmon;
-        
+         text-align: right;
+         padding-top: 10px;
+         padding-bottom: 10px; 
+         padding-left: 10px;
+         padding-right: 20px;
+         padding-bottom: 30px;
+         width: 100%;
+         height: 100px;
       
      }
 .dropdown:hover .dropdown-menu {
@@ -96,71 +120,41 @@
 .dropdown-item{
   color: black;
 }
-.save_recipe{
-  margin-right:auto;
-    margin-left: auto;
+.left_img{
+width: 500px;
+height: 500px;
+float: left;
+margin-left:50px;
 }
-.caption{
-    color: lightgray;
-}
-.thumbnail{
-    padding:0 0 15px 0;
-    border:none;
-    border-radius:0;
-}
-.thumbnail img{
-    margin-bottom: 10px;
-}
-.ask{
-text-align: right;
- width: 100%;
-
+.recipe{
+  margin-left: 50px;
+  background-color:white;
+  border:lightgray solid 1px;
+ width: 500px;
  height: 500px;
-}
-.container_log {
-  position: absolute;
-  right: 700px;
-  margin-top: 10px;
-
-  width: 300px;
-  max-width: 380px;
-  padding: 16px;
+ float: left;
 
 }
-.login_button{
-  padding: 16px 20px;
- margin-bottom: 5px;
- margin-left: 40px;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  background-color:lightgray;
-border: none;
-}
-.end_btn{
-  background-color: darkseagreen;
-  position: absolute;
-  width: 100px;
-  height: 50px;
-  margin-top: 30px;
-  margin-left: -1300px;
-  border: none; 
- 
-}
-.Info{
+#choose{
+  text-align: center;
   background-color: darksalmon;
-         text-align: right;
-         padding-top: 10px;
-         padding-bottom: 10px; 
-         padding-left: 10px;
-         padding-right: 20px;
-         padding-bottom: 30px;
-         width: 100%;
-         height: 100px;
+  margin-left:50%;
+  border-radius: 5px;
+  border:1px solid darksalmon;
+  color:white;
 }
-</style>
-</head>
+#choose:hover{
+  color:darksalmon;
+  background-color: white;
+}
 
+</style>
+<script>
+  function handleClick(button){
+    button.style.backgroundColor="pink";
+  }
+</script>
+</head>
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container">
@@ -169,9 +163,8 @@ border: none;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-
                 </button>
+
                 <a class="navbar-brand" href="Mainpage.html">My Own Michelin</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -182,9 +175,10 @@ border: none;
                     </a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="sd.html">반찬</a><br>
-                      <a class="dropdown-item" href="soup.html">찌개/국</a><br>
-                      <a class="dropdown-item" href="#">한 그릇 요리</a><br>
-                      <a class="dropdown-item" href="#">간식</a>
+                        <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                        <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                        <a class="dropdown-item" href="dessert.html">간식</a>
+                      
                     </div>
                   </li>
                     <li class="nav-item dropdown">
@@ -192,75 +186,51 @@ border: none;
                         인기차트
                       </a>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">반찬</a><br>
-                        <a class="dropdown-item" href="#">찌개/국</a><br>
-                        <a class="dropdown-item" href="#">한 그릇 요리</a><br>
-                        <a class="dropdown-item" href="#">간식</a>
+                        <a class="dropdown-item" href="반찬.html">반찬</a><br>
+                            <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                            <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="디저트간식.html">간식</a>
+                        
                       </div>
                     </li>
                     <li><a href="SearchMart.html">주변 마트 찾기</a></li>
-                    <li><a href="#">마이 페이지</a></li>
+                    <li><a href="mypage.html">마이 페이지</a></li>
                     <li><button type="button" class="login" onclick="location.href='Login.html'">로그아웃</button> </li>
+                 
                 </ul>
             </div>
         </div>
     </nav>
-   
+
     <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
-      <h3>내가 찜한 레시피</h3>
-      <div class="save_recipe">
-          <div class="row">
-              <div class="col-xs-4">
-                  <a href="#" class="thumbnail">
-                      <img src="냉동만두.jpg" style="width:275px; height:275px" class="img-responsive">
-                      <div class="caption">
-                          <h3>냉동만두 달걀말이</h3>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-xs-4">
-                  <a href="#" class="thumbnail">
-                      <img src="소시지.jpg" style="width:275px; height:275px" class="img-responsive">
-                      <div class="caption">
-                          <h3>소시지케첩볶음</h3>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-xs-4">
-                  <a href="#" class="thumbnail">
-                      <img src="계란.jpg" style="width:275px; height:275px" class="img-responsive">
-                      <div class="caption">
-                          <h3>뚝배기 계란찜</h3>
-                      </div>
-                  </a>
-              </div>
-          </div>
-          
-
-    </div>
-    </div>
-  
-    <div class="ask">
-      <form class="container_log">
-        <h1>건의 사항</h1>
+        <h1 style="text-align: center;">깍두기볶음밥</h1>       
         <br>
-         <p><textarea cols="50" rows="10"></textarea></p>
-  
-         
-            <input type="submit" class="login_button">
-          
-     
-      </form>
+        <div class="container container-fluid">
+            <div class="left_img">
+              <img src="깍두기.jpg" style="height:500px;width:500px">   
+            </div>   
+            <div class="container-fluid recipe">
+              <h3>재료</h3>
+              <h4>밥 1공기(200g) 우목심 1/2컵(50g) 대파 1/2컵(40g) 깍두기 1컵(100g) 김치국물 1/5컵(50g) 고추장 2/3큰술(10g) 물 2/3컵(120g) 참기름 1/3큰술(2g) 진간장 1큰술(10g) 황설탕 1/3큰술(3g) 식용유 3큰술(20g) 식용유(달걀용) 적당량 달걀 1개 맛소금 적당량 깨소금 적당량 </h4>
+              <br>
+              <h3>만드는 법</h3>
+              <h4>1. 깍두기는 잘게 다지고 대파는 송송 썰어 준비한다. 2. 프라이팬에 식용유, 고기, 대파를 넣어 볶아준다. 3. 대파와 고기가 노릇해지면 깍두기, 김치국물, 고추장, 설탕, 물, 진간장을 넣어 졸여준다. 4. 수분이 날아가면 밥을 넣고 국자를 이용하여 섞어준다. 5. 밥과 양념장이 골고루 섞이면 센 불에 올려 볶아준다. 6. 기호에 맞게 미원을 넣어준다. 7. 달걀은 튀기듯이 프라이하여 준비한다. 8. 완성그릇에 볶음밥을 담고 달걀을 얹는다. 9. 깨소금을 뿌려 마무리한다.</h4>
+            </div>  
+        </div>
+        <button id="choose" onclick="handleClick(this);">찜하기</button>
     </div>
-   
-    <div class="Info">
-        <button type="button" class="end_btn" onclick="location.href='Login.html'">탈퇴하기</button>
-        OpenSource Web Software<br>
-        2018038003 Eom  Eunji <br>
-        2018038009 Hong Yeongseon<br>
-        2018038024 Hwang Seunghye<br>
-    
+       
 
-    </div>
+  <div class="Info">
+    OpenSource Web Software<br>
+    2018038003 Eom  Eunji <br>
+    2018038009 Hong Yeongseon<br>
+    2018038024 Hwang Seunghye<br>
+  </div>
+
+</div>
+
+
+
 </body>
 </html>

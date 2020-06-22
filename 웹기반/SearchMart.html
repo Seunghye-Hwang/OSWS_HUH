@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Search Mart </title>
+    <meta name="viewport" content="width=devicd-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </script>
+
+<style>
+     .container-fluid{
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+                }
+                .navbar{
+                    background-color: white;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    border:0;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                    font-size: 20px;
+                    letter-spacing: 5px;
+                }
+                .navbar-nav li a:hover{
+                    color: darksalmon !important;
+                }
+                .navbar-brand{
+                    font-size: 40px;
+
+                }
+    .navbar-brand:hover{
+
+         color: darksalmon !important;
+    
+    }
+  
+.login{
+  background:darksalmon;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.0em;
+  padding:0 10px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.login:hover{
+  background:#fff;
+  color:darksalmon;
+}
+.login:before,.login:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: darksalmon;
+  transition:400ms ease all;
+}
+.login:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.login:hover:before,.login:hover:after{
+  width:50%;
+  transition:800ms ease all;
+}
+
+.item{
+    margin: 70px 0;
+}
+.navbar-toggle{
+    background-color: darksalmon;
+}
+.navbar-brand:hover{
+    color: darksalmon;
+}
+.Info{
+         background-color: darksalmon;
+        
+      
+     }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.dropdown-item{
+  color: black;
+}
+.save_recipe{
+  margin-right:auto;
+    margin-left: auto;
+}
+.caption{
+    color: lightgray;
+}
+.thumbnail{
+    padding:0 0 15px 0;
+    border:none;
+    border-radius:0;
+}
+.thumbnail img{
+    margin-bottom: 10px;
+}
+.ask{
+text-align: right;
+ width: 100%;
+
+ height: 500px;
+}
+.container_log {
+  position: absolute;
+  right: 700px;
+  margin-top: 10px;
+
+  width: 300px;
+  max-width: 380px;
+  padding: 16px;
+
+}
+.login_button{
+  padding: 16px 20px;
+ margin-bottom: 5px;
+ margin-left: 40px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  background-color:lightgray;
+border: none;
+}
+.end_btn{
+  background-color: darkseagreen;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: -1300px;
+  border: none; 
+ 
+}
+.Info{
+  background-color: darksalmon;
+         text-align: right;
+         padding-top: 10px;
+         padding-bottom: 10px; 
+         padding-left: 10px;
+         padding-right: 20px;
+         padding-bottom: 30px;
+         width: 100%;
+         height: 100px;
+}
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="Mainpage.html">My Own Michelin</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  레시피
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="sd.html">반찬</a><br>
+                  <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                  <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                  <a class="dropdown-item" href="#">간식</a>
+                  
+                </div>
+              </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    인기차트
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="반찬.html">반찬</a><br>
+                    <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                    <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
+                    <a class="dropdown-item" href="디저트간식.html">간식</a>
+                    
+                  </div>
+                </li>
+                <li><a href="SearchMart.html">주변 마트 찾기</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li><button type="button" class="login" onclick="location.href='Login.html'">로그아웃</button> </li>
+             
+            </ul>
+        </div>
+    </div>
+</nav>
+   
+    <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
+        <div id="map" style="width:800px;height:500px"></div>
+        <script>
+            function myMap(){
+                var mapCanvas=document.getElementById("map");
+                var Cheongju = new google.maps.LatLng(36.643902, 127.501198);
+                var homeplus=new google.maps.LatLng(36.621248,127.446983);
+                var mart=new google.maps.LatLng(36.631788, 127.460768);
+                var mapOptions={
+                    center:Cheongju,
+                    zoom:8
+                };
+                var map=new google.maps.Map(mapCanvas, mapOptions);
+                
+                var marker = new google.maps.Marker({
+                     position:homeplus 
+                        });
+                     marker.setMap(map);
+                     
+            
+                                var info_marker = new google.maps.InfoWindow({
+                                        content: "homeplus"
+
+                                    });
+                                    info_marker.open(map,marker);
+
+
+
+
+                 var marker2 = new google.maps.Marker({
+                 position:mart
+                        });
+                             marker2.setMap(map);
+                    
+                  
+                    var info_marker2 = new google.maps.InfoWindow({
+                                        content: "mart"
+
+                                    });
+                                    info_marker2.open(map,marker2);
+
+
+                  
+            }
+        </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7UoKihm6ps-PH1j_96t3_a-60_FaIUJg&callback=myMap"></script>
+    </div>
+   
+    <div class="Info">
+     
+        OpenSource Web Software<br>
+        2018038003 Eom  Eunji <br>
+        2018038009 Hong Yeongseon<br>
+        2018038024 Hwang Seunghye<br>
+    
+
+    </div>
+</body>
+</html>

@@ -92,11 +92,6 @@
 .carousel-indicators li.active{
     background-color: darkolivegreen;
 }
-.carousel-inner{
-  width: 800px;
-  height: 800px;
-  margin-left: 350px;
-}
 .item{
     margin: 70px 0;
 }
@@ -118,16 +113,6 @@
          height: 100px;
       
      }
-     #pop{
-       width: 500x;
-       height: 700px;
-       background: white;
-       position: absolute;
-       top: 10px;
-       left: 100px;
-       text-align: center;
-       border: 2px solid darksalmon;
-     }
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -135,16 +120,46 @@
 .dropdown-item{
   color: black;
 }
+.left_img{
+width: 500px;
+height: 500px;
+float: left;
+margin-left:50px;
+}
+.recipe{
+  margin-left: 50px;
+  background-color:white;
+  border:lightgray solid 1px;
+ width: 500px;
+ height: 500px;
+ float: left;
+
+}
+#choose{
+  text-align: center;
+  background-color: darksalmon;
+  margin-left:50%;
+  border-radius: 5px;
+  border:1px solid darksalmon;
+  color:white;
+}
+#choose:hover{
+  color:darksalmon;
+  background-color: white;
+}
 
 </style>
-
+<script>
+  function handleClick(button){
+    button.style.backgroundColor="pink";
+  }
+</script>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -159,10 +174,10 @@
                       레시피
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="sd.html">반찬</a><br>
-                      <a class="dropdown-item" href="soup.html">찌개/국</a><br>
-                      <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
-                      <a class="dropdown-item" href="dessert.html">간식</a>
+                        <a class="dropdown-item" href="sd.html">반찬</a><br>
+                        <a class="dropdown-item" href="soup.html">찌개/국</a><br>
+                        <a class="dropdown-item" href="od.html">한 그릇 요리</a><br>
+                        <a class="dropdown-item" href="dessert.html">간식</a>
                       
                     </div>
                   </li>
@@ -172,14 +187,14 @@
                       </a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="반찬.html">반찬</a><br>
-                        <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
-                        <a class="dropdown-item" href="한그릇요리.html">한 그릇 요리</a><br>
-                        <a class="dropdown-item" href="디저트간식.html">간식</a>
+                            <a class="dropdown-item" href="찌개국.html">찌개/국</a><br>
+                            <a class="dropdown-item" href="한그릇요리.html#">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="디저트간식.html">간식</a>
                         
                       </div>
                     </li>
                     <li><a href="SearchMart.html">주변 마트 찾기</a></li>
-                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="mypage.html">마이 페이지</a></li>
                     <li><button type="button" class="login" onclick="location.href='Login.html'">로그아웃</button> </li>
                  
                 </ul>
@@ -187,57 +202,32 @@
         </div>
     </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="rice.jpg" class="img-responsive">
-      </div>
-  
-      <div class="item">
-        <img src="cafe1.jpg" class="img-responsive">
-      </div>
-  
-      <div class="item">
-        <img src="cafe2.jpg" class="img-responsive">
-      </div>
+    <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
+        <h1 style="text-align: center;">고등어 김치찜</h1>       
+        <br>
+        <div class="container container-fluid">
+            <div class="left_img">
+              <img src="고등어.jpg" style="height:500px;width:500px">   
+            </div>   
+            <div class="container-fluid recipe">
+              <h3>재료</h3>
+              <h4>신김치 1/4포기(400g) 고등어 통조림 1캔(400g) 양파 1/2개(180g) 청양고추 3개(20g) 대파 2/3컵(50g) 굵은고춧가루 4큰술(20g) 고운고춧가루 2큰술(10g) 물 2컵(400ml) 간마늘 2큰술(30g) 된장 2큰술(30g) 황설탕 1큰술(10g) 간생강 1/3큰술(5g) 진간장 2큰술(20g) 참기름 2큰술(15g)</h4>
+              <br>
+              <h3>만드는 법</h3>
+              <h4>1. 양파는 0.5cm 두께로 채 썰어 준비한다. 2. 대파는 반으로 갈라 송송 썰어준다. 3. 청양고추를 송송 썰어 준비한다. 4. 볼에 간생강,간마늘, 된장, 황설탕, 참기름, 고운고춧가루, 굵은고춧가루, 진간장, 통조림국물을 섞어 양념장을 만든다. 5. 김치는 꽁다리를 제거하고 냄비에 담는다. 6. 위에 통조림 고등어를 올리고 굵은가시를 제거하고 살 쪽이 바닥으로 가게 해준다. 7. 대파, 청양고추, 양파를 넣는다. 8. 물, 양념장을 넣어 끓인다. 9. 조림이 끓으면 중불로 줄여 10분 정도 끓인다</h4>
+            </div>  
+        </div>
+        <button id="choose" onclick="handleClick(this);">찜하기</button>
     </div>
-  
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+       
+
+  <div class="Info">
+    OpenSource Web Software<br>
+    2018038003 Eom  Eunji <br>
+    2018038009 Hong Yeongseon<br>
+    2018038024 Hwang Seunghye<br>
   </div>
 
-
-<div class="Info">
-OpenSource Web Software<br>
-2018038003 Eom  Eunji <br>
-2018038009 Hong Yeongseon<br>
-2018038024 Hwang Seunghye<br>
-</div>
-<div id="pop">
-  <h1>    
-    오늘의 추천 메뉴
-</h1>
-<img class="popup_img" src="soup.jpg">
-<br>
-<a class="link" href="#" style="font-size:xx-large;">레시피 보러가기--></a>
-<div>
-  <div id="close" style="margin-top: 20px; font-size: xx-large;">닫기</div>
-</div>
 </div>
 
 
