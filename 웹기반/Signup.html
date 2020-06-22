@@ -27,6 +27,8 @@
                 }
                 .navbar-nav li a:hover{
                     color: darksalmon !important;
+             
+                 
                 }
                 .navbar-brand{
                     font-size: 60px;
@@ -35,6 +37,7 @@
     .navbar-brand:hover{
 
          color: darksalmon !important;
+
     
     }
     .login{
@@ -141,6 +144,16 @@ input[type=text]:focus, input[type=password]:focus input[type=email]:focus input
          height: 100px;
       
      }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    border: none;
+  
+
+}
+.dropdown-item{
+  color: black;
+}
 </style>
 
 </head>
@@ -148,24 +161,16 @@ input[type=text]:focus, input[type=password]:focus input[type=email]:focus input
   <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand"  onclick="location.href='Mainpage.html'">Recipe</a>
+           
+            <a class="navbar-brand" href="#">Recipe</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">레시피</a></li>
-                <li><a href="#">인기차트</a></li>
-                <li><a href="#">게시판</a></li>
+              
                 <li><button type="button" class="login" onclick="location.href='Login.html'">로그인</button> </li>
-
-
+             
             </ul>
-        </div> 
+        </div>
     </div>
 </nav>
 
