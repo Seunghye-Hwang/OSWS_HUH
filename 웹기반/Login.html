@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그인</title>
+
+    <meta name="viewport" content="width=devicd-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+        .container-fluid{
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+                }
+     .navbar{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    border:0;
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    font-size: 12px;
+                    letter-spacing: 5px;
+                
+                }
+                .navbar-nav li a:hover{
+                    color: darksalmon;
+                }
+     .navbar-brand{
+         font-size: 100px;
+         color: darksalmon;
+    
+    }
+  button{
+  background:darksalmon;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:darksalmon;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: darksalmon;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.login{
+  margin-left: 650px;
+ margin-top: 200px;
+}
+#login_button{
+  margin-top: 40px;
+  margin-left: 50px;
+  padding:10px;
+  width: 80px;
+  height: 50px;
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar" ></nav>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-taraget="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              
+            </button>
+            <a class="navbar-brand" href="#">Recipe</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+             <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">레시피</a></li>
+                <li><a href="#">인기차트</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><button type="button" class="Login">로그인</button> </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+<div class="login">
+
+<label> ID <br>
+   <input id="login"></label><br>
+<label> PW <br>
+    <input type="password"></label><br>
+  <Button id="login_button" type="button"  onclick="location.href='Mainpage.html'"> Login</Button>
+    
+</div>
+</body>
+</html>
