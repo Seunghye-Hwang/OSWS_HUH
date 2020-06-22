@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Recipe </title>
+    <meta name="viewport" content="width=devicd-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .container-fluid{
+                       padding-top: 70px;
+                       padding-bottom: 70px;
+                   }
+                   .navbar{
+                       background-color: white;
+                       padding-top: 15px;
+                       padding-bottom: 15px;
+                       border:0;
+                       border-radius: 0;
+                       margin-bottom: 0;
+                       margin-right: 30px;
+                       font-size: 20px;
+                       letter-spacing: 5px;
+                   }
+                   .navbar-nav li a:hover{
+                       color: darksalmon !important;
+                   }
+                   .navbar-brand{
+                       font-size: 60px;
+   
+                   }
+       .navbar-brand:hover{
+   
+            color: darksalmon !important;
+       
+       }
+     
+   .login{
+     background:darksalmon;
+     color:#fff;
+     border:none;
+     position:relative;
+     height:60px;
+     font-size:1.0em;
+     padding:0 10px;
+     cursor:pointer;
+     transition:800ms ease all;
+     outline:none;
+   }
+   .login:hover{
+     background:#fff;
+     color:darksalmon;
+   }
+   .login:before,.login:after{
+     content:'';
+     position:absolute;
+     top:0;
+     right:0;
+     height:2px;
+     width:0;
+     background: darksalmon;
+     transition:400ms ease all;
+   }
+   .login:after{
+     right:inherit;
+     top:inherit;
+     left:0;
+     bottom:0;
+   }
+   .login:hover:before,.login:hover:after{
+     width:50%;
+     transition:800ms ease all;
+   }
+   
+   .carousel-control.right, .carousel-control.left{
+       background-image: none;
+       color: darkolivegreen;
+   }
+   .carousel-indicators li{
+       background-color: darkolivegreen;
+   }
+   .carousel-indicators li.active{
+       background-color: darkolivegreen;
+   }
+   .item{
+       margin: 70px 0;
+   }
+   .navbar-toggle{
+       background-color: darksalmon;
+   }
+   .navbar-brand:hover{
+       color: darksalmon;
+   }
+   .Info{
+            background-color: darksalmon;
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px; 
+            padding-left: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            width: 100%;
+            height: 100px;
+         
+        }
+     
+.mainDisplay{
+    text-align:center;
+    display: table;
+    margin-right:auto;
+    margin-left: auto;
+}
+.caption{
+    color: lightgray;
+}
+.thumbnail{
+    padding:0 0 15px 0;
+    border:none;
+    border-radius:0;
+}
+.thumbnail img{
+    margin-bottom: 10px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.dropdown-item{
+  color: black;
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Recipe</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                          레시피
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">반찬</a><br>
+                          <a class="dropdown-item" href="#">찌개/국</a><br>
+                          <a class="dropdown-item" href="#">한 그릇 요리</a><br>
+                          <a class="dropdown-item" href="#">간식</a>
+                          
+                        </div>
+                      </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            인기차트
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">반찬</a><br>
+                            <a class="dropdown-item" href="#">찌개/국</a><br>
+                            <a class="dropdown-item" href="#">한 그릇 요리</a><br>
+                            <a class="dropdown-item" href="#">간식</a>
+                            
+                          </div>
+                        </li>
+                        <li><a href="#">게시판</a></li>
+                        <li><button type="button" class="login" onclick="location.href='Login.html'">로그인</button> </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid" style="background-color:lightgray; background-color:rgba(211, 211, 211, 0.5)">
+        <div class="mainDisplay">
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="샐러드.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>멕시칸 샐러드</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="카나페.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>알새우칩 카나페</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="라면땅.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>라면땅</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="토마토.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>토마토 달걀 볶음</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="만두.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>만두피 튀김</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="감자스프.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>감자스프</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="사과조림.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>사과조림</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="사과토스트.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>사과조림 토스트</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="치즈토스트.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>치즈 토스트</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="옥수수전.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>옥수수전</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#" class="thumbnail">
+                        <img src="햄치즈.jpg" style="width:275px; height:275px" class="img-responsive">
+                        <div class="caption">
+                            <h3>햄 치즈 토스트</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+<div class="Info">
+OpenSource Web Software<br>
+2018038003 Eom  Eunji <br>
+2018038009 Hong Yeongseon<br>
+2018038024 Hwang Seunghye<br>
+</div>
+
+</body>
+</html>
