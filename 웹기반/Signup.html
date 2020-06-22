@@ -14,41 +14,46 @@
                     padding-top: 70px;
                     padding-bottom: 70px;
                 }
-     .navbar{
+                .navbar{
+                    background-color: white;
                     padding-top: 15px;
                     padding-bottom: 15px;
                     border:0;
                     border-radius: 0;
                     margin-bottom: 0;
-                    font-size: 12px;
+                    margin-right: 30px;
+                    font-size: 20px;
                     letter-spacing: 5px;
-                
                 }
                 .navbar-nav li a:hover{
-                    color: darksalmon;
+                    color: darksalmon !important;
                 }
-     .navbar-brand{
-         font-size: 100px;
-         color: darksalmon;
+                .navbar-brand{
+                    font-size: 60px;
+
+                }
+    .navbar-brand:hover{
+
+         color: darksalmon !important;
     
     }
-  button{
+    .login{
   background:darksalmon;
   color:#fff;
   border:none;
   position:relative;
   height:60px;
-  font-size:1.6em;
-  padding:0 2em;
+  font-size:1.0em;
+  padding:0 10px;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
 }
-button:hover{
+.login:hover{
   background:#fff;
   color:darksalmon;
 }
-button:before,button:after{
+.login:before,.login:after{
   content:'';
   position:absolute;
   top:0;
@@ -58,74 +63,146 @@ button:before,button:after{
   background: darksalmon;
   transition:400ms ease all;
 }
-button:after{
+.login:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-button:hover:before,button:hover:after{
-  width:100%;
+.login:hover:before,.login:hover:after{
+  width:50%;
   transition:800ms ease all;
 }
+
 .signup{
-  margin-left: 600px;
+  background-image: url("breakfast.jpg");
+ min-height: 800px;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+ opacity: 0.4;
+ z-index:1;
+}
+.signup::after{
+  top:0;
+  left:0;
+ background-image: url("breakfast.jpg");
+ background-size:100%;
+    opacity:0.5!important;
+    content:"";
+    width:100%;
+    height:100%;
+    z-index: -1;
+
+}
+.container_log {
+  position: absolute;
+  right: 0;
   margin-top: 200px;
-  padding: 30px;
-  width: 400px;
-  height: 100x;
-  margin-bottom: 30px;
+  margin-right: 20px;
+  width: 300px;
+  max-width: 380px;
+  padding: 16px;
+  background-color: white;
+  z-index: 1;
 }
-#signup_button{
-  margin-top: 40px;
-  margin-left: 50px;
-  padding:10px;
-  width: 100px;
-  height: 50px;
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+
 }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+
+}
+.signup_button{
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  background-color:lightgray;
+  border:lightgrey
+}
+.Info{
+         background-color: darksalmon;
+         text-align: right;
+         margin-bottom: 0px;
+         padding-top: 10px;
+         padding-bottom: 10px; 
+         padding-left: 10px;
+         padding-right: 20px;
+         padding-bottom: 30px;
+         width: 100%;
+         height: 100px;
+      
+     }
 </style>
 
 </head>
 <body>
-    <nav class="navbar" ></nav>
+  <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-taraget="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-              
             </button>
-            <a class="navbar-brand" href="#">Recipe</a>
+
+            <a class="navbar-brand"  onclick="location.href='Mainpage.html'">Recipe</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-             <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">레시피</a></li>
                 <li><a href="#">인기차트</a></li>
                 <li><a href="#">게시판</a></li>
-                <li><button type="button" class="Login">로그인</button> </li>
+                <li><button type="button" class="login" onclick="location.href='Login.html'">로그인</button> </li>
+
+
             </ul>
-        </div>
+        </div> 
     </div>
 </nav>
 
 <div class="signup">
-
-<label>이름 <br>
-   <input type="text"></label><br>
-<label> 전화번호 <br>
-    <input type="tel"></label><br>
-<label>이메일 <br>
-        <input type="email"></label><br>
-<label> 아이디 <br>
-        <input type="text"></label><br>
-<label> 비밀번호 <br>
-    <input type="password"></label><br>
-<label> 닉네임 <br>
-        <input type="text"></label><br>    
-
-  <Button id="signup_button" type="button"  onclick="location.href='Mainpage.html'"> Sign Up</Button>
-    
+  <form class="container_log">
+    <h1>회원가입</h1>
+    <label>
+      이름
+    </label>
+    <br>
+      <input type="text" placeholder="Enter Name" required><br>
+      <label>
+        전화번호
+      </label>
+      <br>
+        <input type="tel" placeholder="Enter Tel" required><br>
+        <label>
+          이메일
+        </label>
+        <br>
+          <input type="email" placeholder="Enter Email" required><br>
+          <label>
+            ID
+          </label>
+          <br>
+            <input type="text" placeholder="Enter ID" required><br>
+            <label>
+              PW
+            </label>
+            <br>
+              <input type="password" placeholder="Enter pw" required><br>
+        <button type="submit" class="signup_button" onclick="location.href='Mainpage.html'">회원가입</button>
+ 
+  </form>
 </div>
 </body>
 </html>

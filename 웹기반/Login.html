@@ -112,12 +112,12 @@ input[type=text]:focus, input[type=password]:focus {
 
 .login_button{
   padding: 16px 20px;
-  border: none;
+ margin-bottom: 5px;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
   background-color:lightgray;
-  border:lightgrey
+border: none;
 }
 .navbar-toggle{
     background-color: darksalmon;
@@ -168,7 +168,7 @@ input[type=text]:focus, input[type=password]:focus {
 
   <div class="loginarea" >
     <form class="container_log">
-      <h1>Login</h1>
+      <h1>로그인</h1>
       <label>
         ID
       </label>
@@ -180,7 +180,8 @@ input[type=text]:focus, input[type=password]:focus {
         </label>
         <br>
           <input type="password" placeholder="Enter PW" required><br>
-          <button type="submit" class="login_button" onclick="location.href='Mainpage.html'">Login</button>
+          <button type="submit" class="login_button" onclick="location.href='Mainpage.html'">로그인</button>
+          <button type="submit" class="login_button" onclick="location.href='Signup.html'">회원가입</button>
    
     </form>
 </div>
